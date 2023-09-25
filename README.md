@@ -45,7 +45,15 @@ component as a prop.
 Step 3: Modify the HabitForm Component
 
 - In the HabitForm component, make sure you have
-the categories prop passed to it. 
+the categories prop passed to it.
+- Create state for unique categories.
+-  Create an array called defaultCategories that
+contains the default category names you want to include.
+-  Filter out duplicate categories by using the
+filter method on the categories array.
+- Set the state of uniqueCategories by merging the
+defaultCategories array with the
+filteredCategories array.
 - Inside the <select> element in your form,
 you should have a loop that maps through the
 categories prop and generates <option> elements
@@ -54,9 +62,4 @@ for each category.
 categories state. Remove the default categories
 from the initial state of categories. Initialize
 the categories state with an empty array [].
-- In your HabitForm.js component, right above the
-mapping loop for the categories, manually add
-the default categories to the categories array
-(e.g., "Read", "Drink Water", "Do Exercise").
-- Make sure you add them as separate <option>
-elements in the loop.
+
